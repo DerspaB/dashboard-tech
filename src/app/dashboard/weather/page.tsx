@@ -1,4 +1,4 @@
-import { InputLocation, LocationList } from "@/components";
+import { InputLocation, LocationList, WeatherDetail } from "@/components";
 
 export const metadata = {
   title: "Current Weather",
@@ -11,6 +11,7 @@ export default async function WeatherPage() {
       <h1 className="text-[30px] font-semibold">Weather</h1>
       <InputLocation />
       <LocationList />
+      <WeatherDetail />
     </div>
   );
 }

@@ -5,5 +5,6 @@ export { NavbarMobile } from './navbar/NavbarMobile'
 export { InputLocation } from './weather/InputLocation'
 export { LocationList } from './weather/LocationList'
 export { LocationItem } from './weather/LocationItem'
+export { WeatherDetail } from './weather/WeatherDetail'
 
 
