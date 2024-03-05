@@ -1,4 +1,4 @@
-import { InputLocation } from "@/components";
+import { InputLocation, LocationList } from "@/components";
 
 export const metadata = {
   title: "Current Weather",
@@ -10,6 +10,7 @@ export default async function WeatherPage() {
     <div className="flex flex-col w-full justify-center items-center gap-2">
       <h1 className="text-[30px] font-semibold">Weather</h1>
       <InputLocation />
+      <LocationList />
     </div>
   );
 }

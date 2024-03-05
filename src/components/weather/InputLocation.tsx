@@ -1,5 +1,6 @@
 "use client";
 
+import { useGetLocations } from "@/hooks";
 import { useAppDispatch, useAppSelector } from "@/store";
 import { setWeatherInput } from "@/store/appState/appStateSlice";
 import { ChangeEvent } from "react";
@@ -7,6 +8,7 @@ import { ChangeEvent } from "react";
 export const InputLocation = () => {
   const { weatherInput } = useAppSelector((state) => state.appState);
   const dispatch = useAppDispatch();
+  const { handleFetchLocations } = useGetLocations();
 
   const handleChangeValue = (event: ChangeEvent<HTMLInputElement>) => {
     dispatch(setWeatherInput(event.target.value));
@@ -21,7 +23,10 @@ export const InputLocation = () => {
         type="text"
         placeholder="Search city"
       />
-      <button className="bg-blue-500 text-white font-bold px-3 py-2 rounded-md">
+      <button
+        onClick={handleFetchLocations}
+        className="bg-blue-500 text-white font-bold px-3 py-2 rounded-md"
+      >
         Search
       </button>
     </div>

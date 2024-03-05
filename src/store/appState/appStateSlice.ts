@@ -1,3 +1,4 @@
+import { ILocations } from '@/interfaces'
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
@@ -5,12 +6,32 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 interface appState {
     showMobileMenu: boolean
     weatherInput: string
+    listofLocations: ILocations[]
+    currentLocation: ILocations
+}
+
+const getInitialLocation = (): ILocations => {
+    return {
+        place_id: "",
+        licence: "",
+        osm_type: "",
+        osm_id: "",
+        boundingbox: [],
+        lat: "",
+        lon: "",
+        display_name: "",
+        class: "",
+        type: "",
+        importance: 0,
+    }
 }
 
 // Define the initial state using that type
 const initialState: appState = {
     showMobileMenu: false,
-    weatherInput: ''
+    weatherInput: "",
+    listofLocations: [],
+    currentLocation: getInitialLocation()
 }
 
 export const appSlice = createSlice({
@@ -25,8 +46,14 @@ export const appSlice = createSlice({
         setWeatherInput: (state, action: PayloadAction<string>) => {
             state.weatherInput = action.payload
         },
+        setListofLocations: (state, action: PayloadAction<ILocations[]>) => {
+            state.listofLocations = action.payload
+        },
+        setCurrentLocation: (state, action: PayloadAction<ILocations>) => {
+            state.currentLocation = action.payload
+        },
     },
 })
 
-export const { setShowMobileMenu, setWeatherInput } = appSlice.actions
+export const { setShowMobileMenu, setWeatherInput, setCurrentLocation, setListofLocations } = appSlice.actions
 export default appSlice.reducer
