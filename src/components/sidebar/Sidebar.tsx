@@ -33,10 +33,10 @@ const menuItems: IMenuItems[] = [
 export const Sidebar = () => {
   const { showMobileMenu } = useAppSelector((state) => state.appState);
   return (
-    <>
+    <div className="">
       <NavbarMobile />
       {showMobileMenu && <SidebarContent menuItems={menuItems} />}
       <SidebarContent isDesktop={true} menuItems={menuItems} />
-    </>
+    </div>
   );
 };

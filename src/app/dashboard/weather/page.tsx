@@ -7,7 +7,7 @@ export const metadata = {
 
 export default async function WeatherPage() {
   return (
-    <div className="flex flex-col w-full justify-center items-center gap-2">
+    <div className="flex flex-col w-full justify-center items-center gap-5">
       <h1 className="text-[30px] font-semibold">Weather</h1>
       <InputLocation />
       <LocationList />
