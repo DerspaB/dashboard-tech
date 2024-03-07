@@ -9,6 +9,9 @@ export { CreateTaskCard } from './taskManager/CreateTaskCard'
 export { TaskItem } from './taskManager/TaskItem'
 export { TaskList } from './taskManager/TaskList'
 export { Switch } from './Switch'
+export { NewsList } from './news/NewsList'
+export { NewsItem } from './news/NewsItem'
+export { Loading } from './news/Loading'
 
 
 

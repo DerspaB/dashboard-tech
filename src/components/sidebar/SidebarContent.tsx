@@ -18,7 +18,7 @@ export const SidebarContent = ({
       id="menu"
       className={`${
         isDesktop ? "hidden md:block" : "fixed"
-      }  w-full mt-[60px] md:mt-0 md:w-[400px] bg-gray-900 min-h-screen z-10 text-slate-300 left-0 overflow-y-scroll`}
+      }  w-full mt-[60px] md:mt-0 md:w-[400px] bg-gray-900 h-full min-h-screen z-10 text-slate-300 left-0 overflow-y-scroll`}
     >
       <div id="logo" className="my-4 px-6">
         <Link
