@@ -23,7 +23,7 @@ export const useGetWeather = () => {
       if (lat == "" || lon == "") return;
       setLoading(true);
       const data = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${openweatherKey}&units=metric
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${openweatherKey}&units=metric
           `,
         headers
       ).then((res) => res.json());
