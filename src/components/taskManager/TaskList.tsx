@@ -20,6 +20,7 @@ export const TaskList = () => {
     <div className=" py-4 mt-[60px] justify-center md:justify-start md:max-w-[980px] px-2 flex flex-wrap w-full gap-[30px] ">
       {tasks.map((task, idx) => (
         <TaskItem
+          key={idx}
           {...task}
           handleComplete={() => handleComplete(idx)}
           handleDelete={() => handleDelete(idx)}
